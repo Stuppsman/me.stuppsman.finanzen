@@ -1,0 +1,145 @@
+name: Finanzen
+version: 0.8
+author: Stuppsman
+description: Das Serverfinanzsystem.
+website: www.ChilliCraft.de
+main: me.stuppsman.finanzen.Finanzen
+depend: [dynmap]
+
+commands:
+  grenzen:
+    description: Setzt die Stadtgrenzen neu, wenn das Geld reicht.
+    usage: /<command>
+    permission: finanzen.neuestadt
+  fertig:
+    description: Markiert ein GS als bewohnt oder als Stadtgebaeude.
+    usage: /<command> <|stadtgebaeude>
+    permission: finanzen.mod
+  stadt:
+    description: Zeigt dir die Stadtliste an.
+    usage: /<command> <liste>
+    permission: finanzen.member
+  neuestadt:
+    description: Erstellt eine neue Stadt. (Bereich vorher markieren!)
+    usage: /<command> <stadtname>
+    permission: finanzen.neuestadt
+  delstadt:
+    description: Entfernt eine Stadt aus der Datenbank.
+    usage: /<command> <stadtname>
+    permission: finanzen.delstadt
+  gs:
+    description: Grundstuecke
+    usage: /<command>
+    permission: finanzen.admin
+  delgs:
+    description: Entfernt ein GS aus der Datenbank.
+    usage: /<command> <gs-id>
+    permission: finanzen.admin
+  baurecht:
+    description: Gibt dem Spieler <spieler> das Recht auf dem GS zu bauen.
+    usage: /<command> <GS-ID> <spieler>
+    permission: finanzen.member
+  rsrecht:
+    description: Gibt dem Spieler <spieler> das Recht auf dem GS Redstone zu benutzen.
+    usage: /<command> <GS-ID> <spieler>
+    permission: finanzen.member
+  schluessel:
+    description: Gibt dem Spieler <spieler> das Recht auf dem GS Tueren und Kisten zu oeffnen.
+    usage: /<command> <GS-ID> <spieler>
+    permission: finanzen.member
+  chilli:
+    description: Macht dich einmal am Tag satt und gibt dir eine Chilli.
+    permission: finanzen.member
+    usage: /<command>
+  chillis:
+    description: Zeigt dir an, wieviele Chillis du schon gesammelt hast.
+    permission: finanzen.member
+    usage: /<command>
+  ca:
+    description: Zieht dem Spieler Chillis ab.
+    permission: finanzen.admin
+    usage: /<command>
+  shop:
+    description: Zeigt Infos ueber das Shopsystem an.
+    permission: finanzen.shop
+    usage: /<command>
+  id:
+    description: Zeigt dir die ID des Items in deiner Hand an.
+    permission: finanzen.member
+    usage: /<command>
+  idsuche:
+    description: Durchsucht die Datenbank nach der ID des angegebenen Items.
+    usage: /<command> <itemname>
+    permission: finanzen.member
+  konto:
+    description: Zeigt dir deinen Kontostand.
+    permission: finanzen.member
+    usage: /<command>
+  konto <spieler>:
+    description: Zeigt die letzten Transaktionen eines Spielers an.
+    permission: finanzen.admin
+    usage: /<command>
+  konto reset:
+    description: Resettet den Kontoauszug.
+    permission: finanzen.kontoauszug
+    usage: /<command>
+  spende:
+    description: Spende einen Betrag an die Stadt, in der du dich befindest.
+    permission: finanzen.member
+    usage: /<command> <geld>
+  gib:
+    description: Zeigt Infos fuer den gib-Befehl.
+    permission: finanzen.member
+    usage: /<command>
+  gib <geld>:
+    description: Ercheatet dem Admin Geld.
+    permission: finanzen.admin
+    usage: /<command>
+  gib <spieler> <geld>:
+    description: Gibt dem Spieler Geld.
+    permission: finanzen.member
+    usage: /<command>
+  gib <spieler> <geld> admin:
+    description: Ercheatet dem Spieler Geld.
+    permission: finanzen.admin
+    usage: /<command>
+  kredit:
+    description: Zeigt dir alle Infos zu Krediten an.
+    permission: finanzen.kredit
+    usage: /<command>
+  kredit anfrage <geld>:
+    description: Schreibt eine Kreditanfrage in die Datenbank.
+    permission: finanzen.kredit
+    usage: /<command>
+  kredit <spieler> <zinssatz>:
+    description: Macht dem anfragenden Spieler ein Angebot, sich das Geld zu einmaligen Zinsen zu leihen.
+    permission: finanzen.kredit
+    usage: /<command>
+  kredit von <spieler> annehmen:
+    description: Nimmt das Leihangebot eines Spielers an.
+    permission: finanzen.kredit
+    usage: /<command>
+  kredit von <spieler> bezahlen:
+    description: Zahlt dem Spieler das geliehene Geld zurueck.
+    permission: finanzen.kredit
+    usage: /<command>
+  kaufe:
+    description: Kauft ein Item in angegebener Anzahl. Data-Werte werden durch einen Doppelpunkt getrennt.
+#    permission: finanzen.servershop
+    usage: /<command> <itemid> <anzahl>
+  kaufe shop:
+    description: Kauft beim angewaehlten Shop ein.
+#    permission: finanzen.shop
+    usage: /<command> <anzahl>
+  verkaufe:
+    description: Verkauft ein Item in angegebener Anzahl.
+#    permission: finanzen.servershop
+    usage: /<command> <itemid> <anzahl>
+  verkaufe shop:
+    description: Verkauft beim angewaehlten Shop.
+#    permission: finanzen.shop
+    usage: /<command> <anzahl>
+  wert:
+    description: Zeigt dir den Wert des Items in deiner Hand an.
+    permission: finanzen.member
+    usage: /<command>

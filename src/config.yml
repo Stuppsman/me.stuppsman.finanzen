@@ -1,0 +1,1628 @@
+#Finanzen-Config
+Startgeld: 100.0
+Waehrung: 'Scoville'
+Kuerzel: '$'
+#Fuer ercheatetes Geld. Farben per &0-f
+Servername: '&2Ch&ci&2ll&ci&2Craft'
+#Shops
+#Kosten zum Erstellen eines Shops:
+Shopkosten: 1000
+#Rueckerstattung beim Abriss eines Shops:
+Shoperstattung: 500
+#Kosten, die entstehen, wenn ein Shop umgestellt wird:
+ShopUmstellKosten: 100
+#Hoechstabstand, den der Spieler haben darf, um mit einem Shop handeln zu koennen.
+Abstand: 3
+#Kredite
+#MaxZinssatz in Prozent
+maxZinssatz: 50
+#Kontoauszug /konto
+#wieviele Transaktionen sollen gespeichert / angezeigt werden: 0 fuer unbegrenzt
+maxTransaktionen: 10
+#reichste Spieler - wieviele sollen in der Top-Liste angezeigt werden?
+maxReichste: 10
+#Grundstuecke:
+#Item, das Grundstuecke markiert. Default: Feder (288) Keine Data-Werte mit angeben! Nur ID!
+marker: 288
+#Tiefe, bis wohin Grundstuecke geschuetzt sind.
+Tiefe: 3
+#Art, wie Grundstuecke markiert werden. Default: Ecken. Moeglich: Ecken, Zaun, Mauer
+GSGrenzen: Zaun
+#Kosten fuer 1x1-GS-Feld
+GSKosten: 10
+#Kosten fuer 1x1-Stadt-Feld
+Stadtkosten: 25
+#Generell Explosionen ausschalten. "false" = aus
+Explosions: false
+#MobSpawn generell ausschalten "false" = Monster aus
+MobSpawn: true
+#Komplette Welt vor Feuerausbreitung schuetzen: "false" = kein Feuer breitet sich aus
+Firespread: false
+#PVP komplett aus? true = Spieler duerfen sich bekaempfen, bis Polizei in der Stadt existiert, danach toggelbar
+PVP: true
+#PVP-Geldgewinn: Wieviel Taschengeld verliert der PVP-Verlierer an den Gewinner - in Prozent
+PVPGewinn: 20
+#Stadtstufen: groesse im Quadrat - Muss nicht unbedingt quadratisch sein, aber so viele Stadtfelder betragen
+Stadtstufen:
+######################################################
+#Gehoeft:
+##neue Gebaeude: lager, fischer
+    Gehoeft: 
+        minBewohner: 1
+        minGroesse: 50
+######################################################
+#Siedlung:
+#vorausgesetzte Gebaeude: lager, fischer
+#neue Gebaeude: muehle, baecker, kapelle
+    Siedlung: 
+        minBewohner: 3
+        minGroesse: 80
+######################################################
+#Weiler:
+#vorausgesetzte Gebaeude: muehle, baecker
+#neue Gebaeude: taverne, mine, schlachthaus
+    Weiler: 
+        minBewohner: 5
+        minGroesse: 100
+######################################################
+#Ortschaft:
+#vorausgesetzte Gebaeude: taverne, kapelle, mine
+#neue Gebaeude: markt, bank, shop, feuerwehr
+    Ortschaft:
+        minBewohner: 8
+        minGroesse: 120
+######################################################
+#Dorf:
+#vorausgesetzte Gebaeude: markt, bank, schlachthaus
+#neue Gebaeude: rathaus, werkzeugschmied, waffenschmied, ruestungsschmied
+    Dorf: 
+        minBewohner: 11
+        minGroesse: 150
+######################################################
+#Kleinstadt:
+#vorausgesetzte Gebaeude: rathaus, feuerwehr, shop, werkzeugschmied, waffenschmied, ruestungsschmied
+#neue Gebaeude: kirche, mauer, supermarkt, alchemist, bahnhof, fabrik1,
+    Kleinstadt: 
+        minBewohner: 15
+        minGroesse: 180
+######################################################
+#Stadt:
+#vorausgesetzte Gebaeude: bank, kirche, mauer, supermarkt, alchemist
+#neue Gebaeude: hafen, leuchtturm, gericht, polizei, knast, bibliothek, burg, krankenhaus
+    Stadt: 
+        minBewohner: 20
+        minGroesse: 200
+######################################################
+#Grossstadt:
+#vorausgesetzte Gebaeude: bahnhof, gericht, polizei, knast, bibliothek, fabrik1
+#neue Gebaeude: mall, garnison, hotel, kloster, casino, fabrik2, tierheim
+    Grossstadt: 
+        minBewohner: 30
+        minGroesse: 300
+######################################################
+#Metropole:
+#vorausgesetzte Gebaeude: burg, hotel, krankenhaus, kloster, mall, fabrik2, tierheim
+#neue Gebaeude: magierturm, palast, schuldturm, turnierplatz
+    Metropole: 
+        minBewohner: 50
+        minGroesse: 500
+######################################################
+#Koenigreich:
+#vorausgesetzte Gebaeude: magierturm, palast, schuldturm, turnierplatz, casino, garnison
+#neue Gebaeude: weltwunder1, fabrik3, denkmal, pranger, tankstelle
+    Koenigreich: 
+        minBewohner: 75
+        minGroesse: 750
+######################################################
+#Weltstadt:
+#vorausgesetzte Gebaeude: weltwunder1, fabrik3, denkmal, pranger, tankstelle
+#neue Gebaeude: weltwunder2, weltwunder3, weltwunder4, weltwunder5, weltwunder6, weltwunder7
+    Weltstadt: 
+        minBewohner: 100
+        minGroesse: 1000
+######################################################
+#Hafenstadt:
+#vorausgesetzte Gebaeude: hafen, (leuchtturm)
+#neueGebaeude: schiff1, schiff2, schiff3  (schiff2 und schiff3 erst mit leuchtturm)
+    Hafenstadt: 
+        minBewohner: 20
+        minGroesse: 200
+######################################################
+#Gebaeudeeinstellungen:
+#minBewohner: erst ab sovielen Bewohnern kann man das Gebaeude anmelden
+#kosten: die anstehenden Kosten, um das Gebaeude anzumelden. Werden beim /fertig <gebaeude> befehl von der Stadtkasse abgezogen.
+#einnahmen: Jede Woche Montag gibt es einmal Steuereinnahmen beim Serverstart fuer die Stadt.
+#Voraussetzung fuer die Einnahmen ist ein Rathaus!
+Gebaeude:
+#Lager gibt Zugriff aufs Stadtlager, die Truhen koennen mit /stadt lager (danach einzelkisten linksklicken) markiert werden. 
+#Pro Bewohner 1 kiste mehr. (=alle 2 Bewohner eine Doppelkiste)
+    lager:
+        minBewohner: 1
+        lagerkisten: 3
+        kosten: 2500
+#Neben dem Fischer entsteht ein AdminShop, der Fisch mit rabatt verkauft.
+    fischer:
+        minBewohner: 2
+        shoprabatt: 20
+        kosten: 3500
+        einnahmen: 100
+#Muehle eroeffnet neben dem GS-Schild einen AdminShop, der Weizensamen mit Rabatt zum Serverpreis kauft. Rabatt in Prozent.
+    muehle:
+        minBewohner: 3
+        shoprabatt: 20
+        kosten: 3500
+        einnahmen: 100
+#erstellt einen Shop, der Brot verkauft.
+    baecker:
+        minBewohner: 4
+        shoprabatt: 20
+        kosten: 3500
+        einnahmen: 100
+#Bei der Taverne entsteht ein Schild, das den Gast ganz satt macht.
+    taverne:
+        minBewohner: 5
+        schildpreis: 30
+        kosten: 4000
+        einnahmen: 500
+#Bei der Kapelle entsteht ein Schild, das den Spieler fuer Geld heilt.
+    kapelle:
+        minBewohner: 4
+        schildpreis: 40
+        kosten: 4500
+#Bei der Mine kann man Kohle guenstig kaufen.
+    mine:
+        minBewohner: 5
+        shoprabatt: 20
+        kosten: 5000
+        einnahmen: 250
+#Der Markt bietet dem Mod/Admin Platz, ServerShops nach belieben hinzustellen und dem User die Moeglichkeit, eigene KistenShops zu erstellen.
+#Die Stadt bekommt den staedtischen Steuersatz der Erstellungskosten der UserShops.
+    markt:
+        minBewohner: 7
+        kosten: 6500
+        einnahmen: 750
+#Die Bank bietet dem Spieler die Moeglichkeit, sein Taschengeld auf ein Konto einzuzahlen. Vorteil: Beim PVP-Tod weniger Verlust.
+    bank:
+        minBewohner: 8
+#Rechts anklicken zum Abheben, zum Einzahlen links.
+        blockID: 23
+        kosten: 10000
+        einnahmen: 1000
+#erstellt zwei AdminShops, die Fleisch billiger verkaufen
+    schlachthaus:
+        minBewohner: 
+        kosten: 
+        shoprabatt: 20
+#Rathaus: Neue Befehle fuer den Buergermeister:
+#'/stadt gsrecht true': Fremde duerfen, wenn sie wollen, in der Stadt Grundstuecke selbst abstecken.
+#'/stadt steuersatz X': Stellt den Steuersatz ein.
+#Voraussetzung fuer Einnahmen
+    rathaus:
+        minBewohner: 5
+        kosten: 5000
+#Am Bahnhof entstehen WarpSchilder in andere Bahnhoefe.
+    bahnhof:
+        minBewohner: 10
+        schildpreis: 50
+        kosten: 12000
+        einnahmen: 300
+#Ein Shop bietet noch mehr Platz fuer AdminShops. Ab hier gibts bei jedem Shopeinkauf einen Aufschlag an Steuern.
+    shop:
+        minBewohner: 9
+        kosten: 10000
+        einnahmen: 1000
+#Stellt den Monsterspawn in der Stadt aus - negative Einnahmen fuer Mauerinstandhaltung.
+    mauer:
+        minBewohner: 10
+        kosten: 15000
+        einnahmen: -1000
+#der Hafen ist Voraussetzung fuer Schiffe, vergroessert das Lager
+    hafen:
+        minBewohner: 15
+        lagerkisten: 5
+        kosten: 15000
+        einnahmen: 1000
+#Schiffe bieten dem Admin die Moeglichkeit, "fremde" Haendlerkisten anzubieten (billigere AdminShops) und erhoehen die Stadteinnahmen generell
+    schiff1:
+        minBewohner: 15
+        kosten: 10000
+        shoprabatt: 20
+        einnahmen: 500
+    schiff2:
+        minBewohner: 20
+        kosten: 15000
+        shoprabatt: 20
+        einnahmen: 750
+    schiff3:
+        minBewohner: 25
+        kosten: 20000
+        shoprabatt: 20
+        einnahmen: 1000
+#Kirche: Der Spieler hat die Chance, bei Erzen in der Stadt doppelte Drops zu bekommen. Chance in Prozent
+    kirche:
+        minBewohner: 18
+        chance: 3
+        kosten: 20000
+#Bietet dem BM die Moeglichkeit, vergehen in seiner Stadt zu tadeln.
+    gericht:
+        minBewohner: 20
+        kosten: 20000
+        einnahmen: -500
+#Die Polizei stellt PVP in der Stadt aus, wenn gewollt.
+    polizei:
+        minBewohner: 20
+        kosten: 20000
+        einnahmen: -500
+#Der Knast bietet dem BM die Moeglichkeit, Spieler fuer ihre Vergehen einzusperren.
+    knast:
+        minBewohner: 20
+        kosten: 20000
+#Pro Insasse, der bei der Montagsabrechnung im Knast sitzt.
+        einnahmen: -250
+#Vergroessert das Stadtlager
+    burg:
+        minBewohner: 25
+        lagerkisten: 10
+        kosten: 30000
+        einnahmen: 200
+#Vergroessert den XP-Zuwachs bei Vorgaengen in der Stadt - mehrXP in Prozent
+    bibliothek:
+        minBewohner: 28
+        kosten: 25000
+        mehrXP: 10
+#Erhoeht die laufenden Stadteinnahmen.
+    hotel:
+        minBewohner: 30
+        einnahmen: 1000
+        kosten: 35000
+#bietet fuer einen Spieler, der in der Stadt gestorben ist, einen extra Spawnpunkt - zudem Krankenhauskosten.
+    krankenhaus:
+        minBewohner: 35
+        khkosten: 100
+        kosten: 35000
+#erweitert das Stadtlager und erhoeht die Stadteinnahmen
+    palast:
+        minBewohner: 40
+        lagerkisten: 20
+        einnahmen: 2000
+        kosten: 50000
+#erhoeht die Stadteinnahmen
+    denkmal:
+        minBewohner: 45
+        kosten: 30000
+        einnahmen: 1500
+#erhoeht die Stadteinnahmen und bietet Platz fuer PVP-Kaempfe/Turniere
+    turnierplatz:
+        minBewohner: 45
+        kosten: 60000
+#erhoeht den XPZuwachs um weitere X Prozent
+    magierturm:
+        minBewohner: 45
+        mehrXP: 15
+        kosten: 50000
+#Gibt dem Spieler eine Chance, doppelte Drops bei Erzen zu bekommen
+    kloster:
+        minBewohner: 22
+        chance: 3
+        kosten: 25000
+#erhoeht die Stadteinnahmen
+    casino:
+        minBewohner: 
+        einnahmen: 2500
+        kosten: 100000
+#erstellt zwei AdminShops, die Blumen verkaufen
+    tankstelle:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen und bietet noch mehr Platz fuer AdminShops
+    supermarkt:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen und bietet noch mehr Platz fuer AdminShops
+    mall:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen und erstellt einen Shop, der Redstone verkauft
+    fabrik1:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen und erstellt einen Shop, der Pistons verkauft
+    fabrik2:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen und erstellt einen Shop, der Sticky-Pistons verkauft        
+    fabrik3:
+        minBewohner: 
+        kosten: 
+#entweder als Zoo zu interpretieren, oder als Heim fuer Hunde/Otzelots, die "abgelegt" werden sollen
+#erstellt einen Shop, der Knochen kauft
+    tierheim:
+        minBewohner: 
+        kosten: 
+        einnahmen:
+#Spieler, die Schulden nicht begleichen koennen, koennen vom BM hier eingesperrt werden.
+    schuldturm:
+        minBewohner: 
+        kosten: 
+#Spieler, die gegen die Regeln verstossen haben, koennen vom BM dorthin teleportiert werden. 
+#andere Spieler koennen den Spieler dort beschiessen
+    pranger:
+        minBewohner: 
+        kosten: 
+#Bietet Schilder, die dem Spieler eine Ruestung anziehen
+    garnison:
+        minBewohner: 
+        kosten: 
+        schildpreis:
+            leder:
+            kette:
+            eisen:
+            gold:
+            diamant:
+#erhoeht die Einnahmen und gibt dem Admin die Moeglichkeit, Zutaten fuer Traenke ueber AdminShops zu verkaufen
+    alchemist:
+        minBewohner: 
+        kosten: 
+        shoprabatt:
+#gibt dem Admin einen Ort fuer WerkzeugShops
+    werkzeugschmied:
+        minBewohner: 
+        kosten: 
+#gibt dem Admin einen Ort fuer WaffenShops
+    waffenschmied:
+        minBewohner: 
+        kosten: 
+#gibt dem Admin einen Ort fuer RuestungsShops
+    ruestungsschmied:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    fabrik1:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    fabrik2:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    fabrik3:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder1:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder2:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder3: 
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder4:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder5:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder6:
+        minBewohner: 
+        kosten: 
+#erhoeht die Stadteinnahmen
+    weltwunder7:
+        minBewohner: 
+        kosten: 
+#Werte fuer den /wert-Befehl - vom Haendler aus betrachtet (/kaufe benutzt also den VK-Wert!)
+
+1.0:
+    name: Stein
+    EK: 1
+    VK: 4
+3.0:
+    name: Erde
+    EK: 0.5
+    VK: 2
+4.0:
+    name: Cobble
+    EK: 0.5
+    VK: 2
+5.0:
+    name: Holz
+    EK: 1.25
+    VK: 5
+5.1:
+    name: Kiefernholz
+    EK: 1.25
+    VK: 5
+5.2:
+    name: Birkenholz
+    EK: 1.25
+    VK: 5
+5.3:
+    name: Dschungelholz
+    EK: 1.25
+    VK: 5
+6.0:
+    name: Setzling
+    EK: 8
+    VK: 32
+6.1:
+    name: Kiefersetzling
+    EK: 8
+    VK: 32
+6.2:
+    name: Birkensetzling
+    EK: 8
+    VK: 32
+6.3:
+    name: Dschungelsetzling
+    EK: 8
+    VK: 32
+12.0:
+    name: Sand
+    EK: 0.5
+    VK: 2
+13.0:
+    name: Kies
+    EK: 0.5
+    VK: 2
+17.0:
+    name: Baumstamm
+    EK:  5
+    VK:  20
+17.1:
+    name: Kiefernstamm
+    EK:  5
+    VK:  20
+17.2:
+    name: Birkenstamm
+    EK:  5
+    VK:  20
+17.3:
+    name: Dschungelstamm
+    EK:  5
+    VK:  20
+20.0:
+    name: Glas
+    EK: 10
+    VK: 25
+22.0:
+    name: Lapislazuli
+    EK: 120
+    VK: 240
+23.0:
+    name: Dispenser
+    EK: 55
+    VK: 110
+24.0:
+    name: Sandstein
+    EK: 2.5
+    VK: 10
+24.1:
+    name: Hieroglyphensandstein
+    EK: 25
+    VK: 100
+24.2:
+    name: Weicher Sandstein
+    EK: 20
+    VK: 80
+25.0:
+    name: Notenblock
+    EK: 40
+    VK: 80
+27.0:
+    name: BoosterSchiene
+    EK: 140
+    VK: 280
+28.0:
+    name: DetektorSchiene
+    EK: 30
+    VK: 60
+29.0:
+    name: Klebekolben
+    EK: 65
+    VK: 130
+29.7:
+    name: Klebekolben
+    EK: 65
+    VK: 130
+33.0:
+    name: Kolben
+    EK: 40
+    VK: 80
+33.7:
+    name: Kolben
+    EK: 40
+    VK: 80
+35.0:
+    name: Wolle
+    EK: 1.25
+    VK: 5
+35.1:
+    name: Wolle(Orange)
+    EK: 7
+    VK: 28
+35.2:
+    name: Wolle(Mangenta)
+    EK: 7
+    VK: 28
+35.3:
+    name: Wolle(Hellblau)
+    EK: 7
+    VK: 28
+35.4:
+    name: Wolle(Gelb)
+    EK: 5
+    VK: 20
+35.5:
+    name: Wolle(Hellgruen)
+    EK: 7
+    VK: 28
+35.6:
+    name: Wolle(Rosa)
+    EK: 7
+    VK: 28
+35.7:
+    name: Wolle(Grau)
+    EK: 5
+    VK: 20
+35.8:
+    name: Wolle(Hellgrau)
+    EK: 7
+    VK: 28
+35.9:
+    name: Wolle(Tuerkis)
+    EK: 7
+    VK: 28
+35.10:
+    name: Wolle(Violett)
+    EK: 7
+    VK: 28
+35.11:
+    name: Wolle(Blau)
+    EK: 5
+    VK: 20
+35.12:
+    name: Wolle(Braun)
+    EK: 7
+    VK: 28
+35.13:
+    name: Wolle(Gruen)
+    EK: 5
+    VK: 20
+35.14:
+    name: Wolle(Rot)
+    EK: 5
+    VK: 20
+35.15:
+    name: Wolle(Schwarz)
+    EK: 5
+    VK: 20
+37.0:
+    name: Loewenzahn
+    EK: 1
+    VK: 5
+38.0:
+    name: Rose
+    EK: 1
+    VK: 5
+39.0:
+    name: Steinpilz
+    EK: 1.25
+    VK: 5
+40.0:
+    name: Fliegenpilz
+    EK: 1.25
+    VK: 5
+41.0:
+    name: Goldblock
+    EK: 1050
+    VK: 2100
+42.0:
+    name: Eisenblock
+    EK: 215
+    VK: 430
+44.0:
+    name: Steinstufe
+    EK: 4
+    VK: 8
+44.1:
+    name: Sandsteinstufe
+    EK: 8
+    VK: 16
+44.2:
+    name: Holzstufe
+    EK: 4
+    VK: 8
+44.3:
+    name: Pflastersteinstufe
+    EK: 3
+    VK: 6
+44.4:
+    name: Ziegelstufe
+    EK: 35
+    VK: 70
+44.5:
+    name: Steinziegelstufe
+    EK: 8
+    VK: 16
+45.0:
+    name: Ziegelstein
+    EK: 20
+    VK: 40
+47.0:
+    name: Buecherregal
+    EK: 65
+    VK: 130
+48.0:
+    name: Moosstein
+    EK: 25
+    VK: 50
+49.0:
+    name: Obsidian
+    EK: 15
+    VK: 30
+50.0:
+    name: Fackel
+    EK: 0.5
+    VK: 2
+52.0:
+    name: MonsterSpawner
+    EK: 1000000
+    VK: 4999999
+53.0:
+    name: Holztreppe
+    EK: 5
+    VK: 10
+54.0:
+    name: Truhe
+    EK: 20
+    VK: 40
+57.0:
+    name: Diamantblock
+    EK: 1875
+    VK: 3750
+58.0:
+    name: Werkbank
+    EK: 10
+    VK: 20
+61.0:
+    name: Ofen
+    EK: 10
+    VK: 20
+64.0:
+    name: Holztuer
+    EK: 15
+    VK: 30
+65.0:
+    name: Leiter
+    EK: 8
+    VK: 16
+66.0:
+    name: Schiene
+    EK: 25
+    VK: 50
+67.0:
+    name: Cobbletreppe
+    EK: 4
+    VK: 8
+69.0:
+    name: Hebel
+    EK: 8
+    VK: 16
+70.0:
+    name: Steindruckplatte
+    EK: 5
+    VK: 10
+71.0:
+    name: Eisentuer
+    EK: 125
+    VK: 250
+72.0:
+    name: Holzdruckplatte
+    EK: 4
+    VK: 8
+76.0:
+    name: Redstonefackel
+    EK: 12
+    VK: 24
+77.0:
+    name: Steinschalter
+    EK: 5
+    VK: 10
+81.0:
+    name: Kaktus
+    EK: 1
+    VK: 4
+82.0:
+    name: Ton
+    EK: 0.5
+    VK: 2
+84.0:
+    name: Jukebox
+    EK: 225
+    VK: 450
+85.0:
+    name: Zaun
+    EK: 4
+    VK: 8
+86.0:
+    name: Kuerbis
+    EK: 0.5
+    VK: 2
+87.0:
+    name: Netherrack
+    EK: 0.5
+    VK: 2
+89.0:
+    name: Glowstone
+    EK: 7.5
+    VK: 30
+91.0:
+    name: Jack
+    EK: 3
+    VK: 10
+96.0:
+    name: Falltuer
+    EK: 8
+    VK: 16
+98.0:
+    name: Steinziegel
+    EK: 1
+    VK: 4
+98.1:
+    name: MoosSteinziegel
+    EK: 150
+    VK: 600
+98.2:
+    name: defSteinziegel
+    EK: 150
+    VK: 600
+98.3:
+    name: Zierstein
+    EK: 50
+    VK: 200
+101.0:
+    name: Eisengitter
+    EK: 12
+    VK: 24
+102.0:
+    name: Glasscheibe
+    EK: 8
+    VK: 16
+107.0:
+    name: Zauntor
+    EK: 9
+    VK: 18
+108.0:
+    name: Ziegeltreppe
+    EK: 65
+    VK: 130
+109.0:
+    name: Steinziegeltreppe
+    EK: 10
+    VK: 20
+112.0:
+    name: Netherbricks
+    EK: 125
+    VK: 500
+116.0:
+    name: Zaubertisch
+    EK: 500
+    VK: 1000
+123.0:
+    name: Laterne
+    EK: 10
+    VK: 40
+126.0:
+    name: Eichenholzstufe
+    EK: 4
+    VK: 8
+126.1:
+    name: Kiefernholzstufe
+    EK: 4
+    VK: 8
+126.2:
+    name: Birkenholzstufe
+    EK: 4
+    VK: 8
+126.3:
+    name: Dschungelholzstufe
+    EK: 4
+    VK: 8
+256.0:
+    name: Eisenschaufel
+    EK: 30
+    VK: 60
+257.0:
+    name: Eisenspitzhacke
+    EK: 75
+    VK: 150
+258.0:
+    name: Eisenaxt
+    EK: 75
+    VK: 150
+259.0:
+    name: Feuerzeug
+    EK: 30
+    VK: 60
+260.0:
+    name: Apfel
+    EK: 1
+    VK: 4
+261.0:
+    name: Bogen
+    EK: 20
+    VK: 40
+262.0:
+    name: Pfeil
+    EK: 3
+    VK: 6
+263.0:
+    name: Kohle
+    EK: 1.5
+    VK: 6
+263.1:
+    name: Holzkohle
+    EK: 1.5
+    VK: 6
+264.0:
+    name: Diamant
+    EK: 175
+    VK: 350
+265.0:
+    name: Eisenbarren
+    EK: 20
+    VK: 40
+266.0:
+    name: Goldbarren
+    EK: 100
+    VK: 200
+267.0:
+    name: Eisenschwert
+    EK: 50
+    VK: 100
+268.0:
+    name: Holzschwert
+    EK: 8
+    VK: 16
+269.0:
+    name: Holzschaufel
+    EK: 5
+    VK: 10
+270.0:
+    name: Holzspitzhacke
+    EK: 10
+    VK: 20
+271.0:
+    name: Holzaxt
+    EK: 10
+    VK: 20
+272.0:
+    name: Steinschwert
+    EK: 5
+    VK: 10
+273.0:
+    name: Steinschaufel
+    EK: 4
+    VK: 8
+274.0:
+    name: Steinspitzhacke
+    EK: 8
+    VK: 16
+275.0:
+    name: Steinaxt
+    EK: 8
+    VK: 16
+276.0:
+    name: Diamantschwert
+    EK: 425
+    VK: 850
+277.0:
+    name: Diamantschaufel
+    EK: 225
+    VK: 450
+278.0:
+    name: Diamantspitzhacke
+    EK: 625
+    VK: 1250
+279.0:
+    name: Diamantaxt
+    EK: 625
+    VK: 1250
+280.0:
+    name: Stock
+    EK: 0.5
+    VK: 2
+281.0:
+    name: Schuessel
+    EK: 5
+    VK: 10
+282.0:
+    name: Pilzsuppe
+    EK: 12
+    VK: 24
+283.0:
+    name: Goldschwert
+    EK: 250
+    VK: 500
+284.0:
+    name: Goldschaufel
+    EK: 125
+    VK: 250
+285.0:
+    name: Goldspitzhacke
+    EK: 350
+    VK: 700
+286.0:
+    name: Goldaxt
+    EK: 350
+    VK: 700
+287.0:
+    name: Faden
+    EK: 1.5
+    VK: 6
+288.0:
+    name: Feder
+    EK: 1.5
+    VK: 6
+289.0:
+    name: Schiesspulver
+    EK: 1.5
+    VK: 6
+290.0:
+    name: Holzsense
+    EK: 8
+    VK: 16
+291.0:
+    name: Steinsense
+    EK: 10
+    VK: 20
+292.0:
+    name: Eisensense
+    EK: 50
+    VK: 100
+293.0:
+    name: Diamantsense
+    EK: 425
+    VK: 850
+294.0:
+    name: Goldsense
+    EK: 250
+    VK: 500
+295.0:
+    name: Samen
+    EK: 0.5
+    VK: 2
+296.0:
+    name: Getreide
+    EK: 1.5
+    VK: 6
+297.0:
+    name: Brot
+    EK: 10
+    VK: 20
+298.0:
+    name: Lederhelm
+    EK: 15
+    VK: 30
+299.0:
+    name: Lederwams
+    EK: 25
+    VK: 50
+300.0:
+    name: Lederhose
+    EK: 22
+    VK: 44
+301.0:
+    name: Lederschuhe
+    EK: 12
+    VK: 24
+302.0:
+    name: Kettenhelm
+    EK: 50
+    VK: 100
+303.0:
+    name: Kettenhemd
+    EK: 125
+    VK: 250
+304.0:
+    name: Kettenhose
+    EK: 100
+    VK: 200
+305.0:
+    name: Kettenschuhe
+    EK: 75
+    VK: 150
+306.0:
+    name: Eisenhelm
+    EK: 125
+    VK: 250
+307.0:
+    name: Eisenpanzer
+    EK: 190
+    VK: 380
+308.0:
+    name: Eisenhose
+    EK: 165
+    VK: 330
+309.0:
+    name: Eisenschuhe
+    EK: 100
+    VK: 200
+310.0:
+    name: Diamanthelm
+    EK: 1050
+    VK: 2100
+311.0:
+    name: Diamantpanzer
+    EK: 1625
+    VK: 3250
+312.0:
+    name: Diamanthose
+    EK: 1450
+    VK: 2900
+313.0:
+    name: Diamantschuhe
+    EK: 875
+    VK: 1750
+314.0:
+    name: Goldhelm
+    EK: 625
+    VK: 1250
+315.0:
+    name: Goldpanzer
+    EK: 950
+    VK: 1900
+316.0:
+    name: Goldhose
+    EK: 875
+    VK: 1750
+317.0:
+    name: Goldschuhe
+    EK: 500
+    VK: 1000
+318.0:
+    name: Feuerstein
+    EK: 1.5
+    VK: 6
+319.0:
+    name: Schwein(roh)
+    EK: 1.5
+    VK: 6
+320.0:
+    name: Schwein(gar)
+    EK: 8
+    VK: 16
+321.0:
+    name: Gemaelde
+    EK: 40
+    VK: 80
+322.0:
+    name: Goldener Apfel
+    EK: 75
+    VK: 150
+322.1:
+    name: Goldener Apfel
+    EK: 10000
+    VK: 20000
+323.0:
+    name: Schild
+    EK: 15
+    VK: 30
+324.0:
+    name: Holztuer
+    EK: 12
+    VK: 24
+325.0:
+    name: Eimer
+    EK: 75
+    VK: 150
+328.0:
+    name: Lore
+    EK: 125
+    VK: 250
+329.0:
+    name: Sattel
+    EK: 100000
+    VK: 1000000
+330.0:
+    name: Eisentuer
+    EK: 150
+    VK: 300
+331.0:
+    name: Redstonestaub
+    EK: 2.5
+    VK: 10
+332.0:
+    name: Schneeball
+    EK: 1
+    VK: 4
+333.0:
+    name: Boot
+    EK: 12
+    VK: 24
+334.0:
+    name: Leder
+    EK: 1.5
+    VK: 6
+335.0:
+    name: Milch
+    EK: 100
+    VK: 200
+336.0:
+    name: Lehmziegel
+    EK: 5
+    VK: 10
+337.0:
+    name: Lehm
+    EK: 1.5
+    VK: 6
+338.0:
+    name: Zuckerrohr
+    EK: 1
+    VK: 4
+339.0:
+    name: Papier
+    EK: 4
+    VK: 8
+340.0:
+    name: Buch
+    EK: 12
+    VK: 24
+341.0:
+    name: Schleimball
+    EK: 5
+    VK: 10
+344.0:
+    name: Ei
+    EK: 1
+    VK: 4
+345.0:
+    name: Kompass
+    EK: 100
+    VK: 200
+346.0:
+    name: Angel
+    EK: 1
+    VK: 20
+347.0:
+    name: Uhr
+    EK: 475
+    VK: 950
+348.0:
+    name: Glowstonestaub
+    EK: 5
+    VK: 20
+349.0:
+    name: Fisch(roh)
+    EK: 1.5
+    VK: 6
+350.0:
+    name: Fisch(gar)
+    EK: 8
+    VK: 16
+351.0:
+    name: Tintensack
+    EK: 7.5
+    VK: 15
+351.1:
+    name: Rosenrot
+    EK: 7.5
+    VK: 15
+351.2:
+    name: Kaktusgruen
+    EK: 7.5
+    VK: 15
+351.3:
+    name: Kakaobohne
+    EK: 7.5
+    VK: 15
+351.4:
+    name: LapisLazuli
+    EK: 10
+    VK: 20
+351.5:
+    name: Violett
+    EK: 10
+    VK: 20
+351.6:
+    name: Tuerkis
+    EK: 10
+    VK: 20
+351.7:
+    name: Hellgrau
+    EK: 10
+    VK: 20
+351.8:
+    name: Grau
+    EK: 10
+    VK: 20
+351.9:
+    name: Pink
+    EK: 10
+    VK: 20
+351.10:
+    name: Hellgruen
+    EK: 10
+    VK: 20
+351.11:
+    name: Loewenzahngelb
+    EK: 7.5
+    VK: 15
+351.12:
+    name: Hellblau
+    EK: 10
+    VK: 20
+351.13:
+    name: Magenta
+    EK: 10
+    VK: 20
+351.14:
+    name: Orange
+    EK: 10
+    VK: 20
+351.15:
+    name: Knochenmehl
+    EK: 7.5
+    VK: 15
+352.0:
+    name: Knochen
+    EK: 1
+    VK: 4
+353.0:
+    name: Zucker
+    EK: 2
+    VK: 8
+354.0:
+    name: Kuchen
+    EK: 125
+    VK: 250
+355.0:
+    name: Bett
+    EK: 15
+    VK: 30
+356.0:
+    name: Repeater
+    EK: 40
+    VK: 80
+357.0:
+    name: Keks
+    EK: 10
+    VK: 20
+358.0:
+    name: Karte
+    EK: 150
+    VK: 300
+359.0:
+    name: Schere
+    EK: 50
+    VK: 100
+360.0:
+    name: Melone(Scheibe)
+    EK: 1.5
+    VK: 6
+361.0:
+    name: Kuerbissamen
+    EK: 5
+    VK: 20
+362.0:
+    name: Melonensamen
+    EK: 5
+    VK: 20
+363.0:
+    name: Rindfleisch
+    EK: 1.5
+    VK: 6
+364.0:
+    name: Steak
+    EK: 8
+    VK: 16
+365.0:
+    name: Huhn(roh)
+    EK: 1.5
+    VK: 6
+366.0:
+    name: Huhn(gar)
+    EK: 8
+    VK: 16
+367.0:
+    name: Gammelfleisch
+    EK: 0.5
+    VK: 2
+368.0:
+    name: Enderperle
+    EK: 25
+    VK: 50
+369.0:
+    name: Feuerrute
+    EK: 25
+    VK: 50
+370.0:
+    name: Ghasttraene
+    EK: 25
+    VK: 50
+371.0:
+    name: Goldklumpen
+    EK: 8
+    VK: 16
+372.0:
+    name: Netherwarzensamen
+    EK: 12
+    VK: 24
+373.0:
+    name: Wasserflasche
+    EK: 25
+    VK: 50
+373.16:
+    name: Awkward Potion
+    EK: 40
+    VK: 80
+373.32:
+    name: Thick Potion
+    EK: 25
+    VK: 50
+373.64:
+    name: Mundane Potion
+    EK: 30
+    VK: 60
+373.8193:
+    name: Regeneration Potion (0:45)
+    EK: 100
+    VK: 200
+373.8194:
+    name: Swiftness Potion (3:00)
+    EK: 100
+    VK: 200
+373.8195:
+    name: Fire Resistance Potion (3:00)
+    EK: 100
+    VK: 200
+373.8196:
+    name: Poison Potion (0:45)
+    EK: 100
+    VK: 200
+373.8197:
+    name: Healing Potion
+    EK: 100
+    VK: 200
+373.8200:
+    name: Weakness Potion (1:30)
+    EK: 100
+    VK: 200
+373.8201:
+    name: Strength Potion (3:00)
+    EK: 100
+    VK: 200
+373.8202:
+    name: Slowness Potion (1:30)
+    EK: 100
+    VK: 200
+373.8204:
+    name: Harming Potion
+    EK: 100
+    VK: 200
+373.8225:
+    name: Regeneration Potion II (0:22)
+    EK: 100
+    VK: 200
+373.8226:
+    name: Swiftness Potion II (1:30)
+    EK: 100
+    VK: 200
+373.8228:
+    name: Poison Potion II (0:22)
+    EK: 100
+    VK: 200
+373.8229:
+    name: Healing Potion II
+    EK: 250
+    VK: 500
+373.8233:
+    name: Strength Potion II (1:30)
+    EK: 100
+    VK: 200
+373.8236:
+    name: Harming Potion II
+    EK: 250
+    VK: 500
+373.8257:
+    name: Regeneration Potion (2:00)
+    EK: 250
+    VK: 500
+373.8258:
+    name: Swiftness Potion (8:00)
+    EK: 250
+    VK: 500
+373.8259:
+    name: Fire Resistance Potion (8:00)
+    EK: 250
+    VK: 500
+373.8260:
+    name: Poison Potion (2:00)
+    EK: 250
+    VK: 500
+373.8264:
+    name: Weakness Potion (4:00)
+    EK: 250
+    VK: 500
+373.8265:
+    name: Strength Potion (8:00)
+    EK: 250
+    VK: 500
+373.8266:
+    name: Slowness Potion (4:00)
+    EK: 250
+    VK: 500
+373.16378:
+    name: Fire Resistance Splash (2:15)
+    EK: 75
+    VK: 150
+373.16385:
+    name: Regeneration Splash (0:33)
+    EK: 75
+    VK: 150
+373.16386:
+    name: Swiftness Splash (2:15)
+    EK: 75
+    VK: 150
+373.16388:
+    name: Poison Splash (0:33)
+    EK: 75
+    VK: 150
+373.16389:
+    name: Healing Splash
+    EK: 75
+    VK: 150
+373.16392:
+    name: Weakness Splash (1:07)
+    EK: 75
+    VK: 150
+373.16393:
+    name: Strength Splash (2:15)
+    EK: 75
+    VK: 150
+373.16394:
+    name: Slowness Splash (1:07)
+    EK: 75
+    VK: 150
+373.16396:
+    name: Harming Splash
+    EK: 75
+    VK: 150
+373.16418:
+    name: Swiftness Splash II (1:07)
+    EK: 40
+    VK: 80
+373.16420:
+    name: Poison Splash II (0:16)
+    EK: 40
+    VK: 80
+373.16421:
+    name: Healing Splash II
+    EK: 300
+    VK: 600
+373.16425:
+    name: Strength Splash II (1:07)
+    EK: 40
+    VK: 80
+373.16428:
+    name: Harming Splash II
+    EK: 300
+    VK: 600
+373.16449:
+    name: Regeneration Splash (1:30)
+    EK: 300
+    VK: 600
+373.16450:
+    name: Swiftness Splash (6:00)
+    EK: 300
+    VK: 600
+373.16451:
+    name: Fire Resistance Splash (6:00)
+    EK: 300
+    VK: 600
+373.16452:
+    name: Poison Splash (1:30)
+    EK: 300
+    VK: 600
+373.16456:
+    name: Weakness Splash (3:00)
+    EK: 300
+    VK: 600
+373.16457:
+    name: Strength Splash (6:00)
+    EK: 300
+    VK: 600
+373.16458:
+    name: Slowness Splash (3:00)
+    EK: 300
+    VK: 600
+373.16471:
+    name: Regeneration Splash II (0:16)
+    EK: 40
+    VK: 80
+374.0:
+    name: Glasflasche
+    EK: 20
+    VK: 40
+375.0:
+    name: Spinnenauge
+    EK: 10
+    VK: 20
+376.0:
+    name: FermSpinnenauge
+    EK: 20
+    VK: 40
+377.0:
+    name: Feuerpulver
+    EK: 15
+    VK: 30
+378.0:
+    name: Magmacreme
+    EK: 25
+    VK: 50
+379.0:
+    name: Braustand
+    EK: 35
+    VK: 70
+380.0:
+    name: Kessel
+    EK: 165
+    VK: 330
+382.0:
+    name: FunkelndeMelone
+    EK: 12
+    VK: 24
+383.0:
+    name: Spawnei
+    EK: 100
+    VK: 400
+2256.0:
+    name: MusicDisk(13)
+    EK: 500
+    VK: 5000
+2257.0:
+    name: MusicDisk(Cat)
+    EK: 500
+    VK: 5000
+2258.0:
+    name: MusicDisk(Blocks)
+    EK: 500
+    VK: 5000
+2259.0:
+    name: MusicDisk(Chirp)
+    EK: 500
+    VK: 5000
+2260.0:
+    name: MusicDisk(Far)
+    EK: 500
+    VK: 5000
+2261.0:
+    name: MusicDisk(Mall)
+    EK: 500
+    VK: 5000
+2262.0:
+    name: MusicDisk(Mellohi)
+    EK: 500
+    VK: 5000
+2263.0:
+    name: MusicDisk(Stal)
+    EK: 500
+    VK: 5000
+2264.0:
+    name: MusicDisk(Strad)
+    EK: 500
+    VK: 5000
+2265.0:
+    name: MusicDisk(Ward)
+    EK: 500
+    VK: 5000
+2266.0:
+    name: MusicDisk(11)
+    EK: 500
+    VK: 5000
